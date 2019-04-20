@@ -20,11 +20,13 @@ export default class Cart extends Component {
     render() {
         return (
             <div>
-              <ul className='cart-table-head'>
+              <div className='cart-table-head'>
+              <ul>
                 <li className='your-cart'>Your Cart</li>
                 <li className='qty-price'>Quantity</li>
                 <li className='qty-price'>Price</li>
               </ul>
+              </div>
             <Divider/>
             <div className='cart-main'>
             {cart.map(item => (
@@ -44,7 +46,7 @@ export default class Cart extends Component {
               <div className='subtotal-total'>${cart.reduce((a,c) => a + c.unitPrice,0)}</div>
             </div>
             </div>
-            <a href='/checkOut'><Button onClick={this.handleClick} variant="contained" color="primary">CHECK OUT</Button></a>
+            <a className ='button' href='/checkOut'><Button onClick={this.handleClick} variant="contained" color="primary">CHECK OUT</Button></a>
             </div>
             
         );

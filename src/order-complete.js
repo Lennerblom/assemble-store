@@ -9,7 +9,7 @@ export default class OrderComplete extends Component {
                 <h2>Order Complete</h2>
                 <Divider/>
             <p>Hooray! Way to order those products.</p>
-            <a href='/'><Button variant="contained" color="primary">PLACE ORDER</Button></a>
+            <a href='/'><Button variant="contained" color="primary">GO HOME</Button></a>
             </div>
         );
     }

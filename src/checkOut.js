@@ -55,7 +55,7 @@ export default class CheckOut extends Component {
             </fieldset>
             </div>
             <Divider/>
-            <a href='/order-complete'><Button variant="contained" color="primary">PLACE ORDER</Button></a>
+            <a className='button' href='/order-complete'><Button variant="contained" color="primary">PLACE ORDER</Button></a>
           </div>
         );
     }
