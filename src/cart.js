@@ -40,6 +40,9 @@ export default class Cart extends Component {
             </Grid>
             </Grid>))}
             <Divider/>
+            <div className='subtotal'>subtotal
+              <div className='subtotal-total'>${cart.reduce((a,c) => a + c.unitPrice,0)}</div>
+            </div>
             </div>
             <a href='/checkOut'><Button onClick={this.handleClick} variant="contained" color="primary">CHECK OUT</Button></a>
             </div>
