@@ -9,13 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <nav>Assemble Store
-            <ul>
-              <li className="nav"><a href='/'>Cart</a></li>
-              <li className="nav"><a href='/checkOut'>Check Out</a></li>
-              <li className="nav"><a href='order-complete'>Order Complete</a></li>
-            </ul>
-              </nav>
+          <div className='header'><p className='header-name'>Assemble Store</p></div>
               <BrowserRouter>
                     <Route exact path={'/'} component={Cart}/>
                     <Route exact path={'/checkOut'} component={CheckOut}/>

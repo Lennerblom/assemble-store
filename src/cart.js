@@ -25,6 +25,23 @@ export default class Cart extends Component {
                 <li className='qty-price'>Price</li>
               </ul>
             <Divider/>
+            <div className='cart-main'>
+            {cart.map(item => (
+            <div className='item-container'>
+            <div className='item-row'>
+              <div classname='item-pic'></div>
+              <ul className='item-description'>
+                <li className='item-name'>{item.name}</li>
+                <li className='item-sku'>SKU# {item.sku}</li>
+              </ul>
+              <div classname='item-qty'>{item.quantity}</div>
+              <div className='item-price'>${item.unitPrice}</div>
+            </div>
+            </div>))}
+            <Divider/>
+            
+
+            </div>
             <a href='/checkOut'><Button onClick={this.handleClick} variant="contained" color="primary">CHECK OUT</Button></a>
             </div>
             

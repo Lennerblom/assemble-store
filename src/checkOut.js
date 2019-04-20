@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button, Divider } from '@material-ui/core';
 
 export default class CheckOut extends Component {
     constructor(props){
@@ -14,8 +15,11 @@ export default class CheckOut extends Component {
     render() {
         return (
           <div>
-            <fieldset>Payment Information
-              <form>
+              <h2>Check Out</h2>
+              <Divider/>
+              <div className='form-container'>
+                <fieldset className='payment-form'>Payment Information
+                <form>
                 <label>Name on Card
                   <input name='name' placeholder='Name on Card' type='text' value={this.state.name}/>
                 </label>
@@ -31,11 +35,14 @@ export default class CheckOut extends Component {
                 </label>
               </form>
             </fieldset>
-            <fieldset>Shopping Address
+            <fieldset className='shipping-form'>Shipping Address
               <form>
                 <input type='text'/>
               </form>
             </fieldset>
+            </div>
+            <Divider/>
+            <a href='/order-complete'><Button variant="contained" color="primary">PLACE ORDER</Button></a>
           </div>
         );
     }
