@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <nav>
+          <nav>Assemble Store
             <ul>
               <li className="nav"><a href='/'>Cart</a></li>
               <li className="nav"><a href='/checkOut'>Check Out</a></li>

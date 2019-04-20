@@ -31,3 +31,45 @@
     transform: rotate(360deg);
   }
 }
+nav {
+  width: 100%;
+  background: #182fb3;
+  height: 4em;
+  text-align: left;
+  color: white;
+}
+
+.nav {
+  display: inline-block;
+  margin: .5em 5em 1em 1em;
+  color: #f5f5f5;
+}
+nav ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+    color: white;
+  }
+
+.cart-table-head {
+  display: inline-block;
+
+  color: gray;
+}
+.your-cart {
+  display: inline-block;
+  width: 100px;
+  border: solid;
+}
+.qty-price {
+  display: inline-block;
+  border: solid;
+}
