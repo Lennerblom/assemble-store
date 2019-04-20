@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Divider } from '@material-ui/core';
 
+
 export default class CheckOut extends Component {
     constructor(props){
         super(props);
@@ -12,6 +13,18 @@ export default class CheckOut extends Component {
             cvv: ''
         }
     }
+    onChange = (e) => {
+        const val =
+        e.target.type === "checkbox"
+          ? e.target.checked
+          : e.target.value;
+    
+      const changedBit = {
+        [e.target.name]: val
+      };
+      this.setState(changedBit);
+      }
+    
     render() {
         return (
           <div>
@@ -19,7 +32,7 @@ export default class CheckOut extends Component {
               <Divider/>
               <div className='form-container'>
                 <fieldset className='payment-form'>Payment Information
-                <form>
+                <form onSubmit={this.onSubmit} onChange={this.onChange}>
                 <label>Name on Card
                   <input name='name' placeholder='Name on Card' type='text' value={this.state.name}/>
                 </label>
@@ -36,7 +49,7 @@ export default class CheckOut extends Component {
               </form>
             </fieldset>
             <fieldset className='shipping-form'>Shipping Address
-              <form>
+              <form onSubmit={this.onSubmit} onChange={this.onChange}>
                 <input type='text'/>
               </form>
             </fieldset>

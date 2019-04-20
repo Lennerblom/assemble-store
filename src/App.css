@@ -42,7 +42,7 @@
 }
 .header-name {
   margin-left: 2em;
-  
+
 }
 
 .nav {
@@ -90,11 +90,12 @@ a {
   align-items: center;
 }
 .item-pic {
-  display: inline-block;
-  border: solid;
-  border-radius: 25em;
+  /* display: inline-block; */
+  border: solid black;
+  border-radius: 5em;
   width: 200px;
   height: 200px;
+  background-color: red;
 }
 .item-description{
   display: inline-block;
